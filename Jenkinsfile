@@ -1,4 +1,5 @@
 pipeline {
+    // No agent required for simple job
     agent any
 
     stages {
