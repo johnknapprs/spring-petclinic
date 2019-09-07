@@ -1,18 +1,16 @@
 pipeline {
-    // No agent required for simple job
     agent any
 
     stages {
-        // This is where we run mvn clean install
-        stage('Build') {
+        stage('Update pom.xml remote host address') {
             steps {
-                sh('mvn clean install')
+                sh('/usr/bin/ruby ./scripts/update_pom_address.rb localhost')
+                sh('cat pom.xml')
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing..'
-            }
+                sh('mvn clean install')            }
         }
         stage('Deploy') {
             steps {
