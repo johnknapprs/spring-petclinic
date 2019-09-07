@@ -3,6 +3,7 @@ pipeline {
     agent any
 
     stages {
+        // This is where we run mvn clean install
         stage('Build') {
             steps {
                 echo 'Building..'
