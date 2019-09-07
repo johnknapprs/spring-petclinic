@@ -6,7 +6,7 @@ pipeline {
         // This is where we run mvn clean install
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh('mvn clean install')
             }
         }
         stage('Test') {
