@@ -6,7 +6,7 @@
     <server>
       <id>deployment</id>
       <username>${env.NEXUS_ADMIN_USERNAME}</username>
-      <password>${env.NEXUS_ADMIN_USERNAME}</password>
+      <password>${env.NEXUS_ADMIN_PASSWORD}</password>
       <configuration></configuration>
     </server>
   </servers>
