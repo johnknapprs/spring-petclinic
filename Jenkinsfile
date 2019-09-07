@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Nexus credentials accessed in project settings.xml
         NEXUS_ADMIN_USERNAME = credentials('NEXUS_ADMIN_USERNAME')
-        NEXUS_ADMIN_PASSWORD = credentials('NEXUS_ADMIN_USERNAME')
+        NEXUS_ADMIN_PASSWORD = credentials('NEXUS_ADMIN_PASSWORD')
     }
     stages {
         stage('Update pom.xml remote host address') {
