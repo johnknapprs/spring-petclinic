@@ -31,12 +31,12 @@ pipeline {
             }
         }
         stage('Update Junit Dependency') {
-            steps {
-                when {
-                    expression {
-                        return params.DEPLOY_JUNIT_UPDATE
-                    }
+            when {
+                expression {
+                    return params.DEPLOY_JUNIT_UPDATE
                 }
+            }
+            steps {
                 sh('/usr/bin/mvn versions:use-latest-versions -DallowSnapshots=true -Dincludes=junit')
             }
         }
