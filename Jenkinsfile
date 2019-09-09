@@ -14,9 +14,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh('/usr/bin/mvn clean install')            }
+                sh('/usr/bin/mvn clean install')            
+            }
         }
         stage('Deploy') {
+            when {
+                expression {
+                    return params.DEPLOY_BUILD
+                }
+            }
             steps {
                 sh('/usr/bin/mvn -s ./settings.xml deploy')
             }
