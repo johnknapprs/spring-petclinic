@@ -3,10 +3,15 @@
 require 'fileutils'
 
 project_root = File.expand_path('.')
-update_files = if ARGV.first.to_s.strip.eql?('base')
+update_files = case ARGV.first.to_s.strip
+               when /base/
                  Dir['scripts/demo_base/*'].map { |f| File.expand_path(f) }
+               when /deploy/
+                 Dir['scripts/demo_deploy/*'].map { |f| File.expand_path(f) }
+               when /creds/
+                 Dir['scripts/demo_secrets/*'].map { |f| File.expand_path(f) }
                else
-                 Dir['scripts/demo_cred/*'].map { |f| File.expand_path(f) }
+                 raise 'Unable to find matching configurations'
                end
 
 puts 'Updating Jenkinsfile'

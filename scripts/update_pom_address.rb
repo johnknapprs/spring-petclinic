@@ -14,7 +14,7 @@ pom_new_data = if ARGV.first.to_s.strip.eql?('localhost')
                  new_address = ['192.168.', user_input].join
 
                  #  puts "Is this value correct #{new_address} (y/n)"
-                 pom_file_data.gsub(/192\.168\.(\d+\.\d+)/, new_address)
+                 pom_file_data.gsub(/localhost/, new_address)
                end
 
 puts 'Writing changes to pom.xml file'

@@ -1,0 +1,15 @@
+[Unit]
+Description=smee
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/smee -u https://smee.io/smOl72stHgfFNnzY --path /github-webhook/ --port 8080
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+IgnoreSIGPIPE=true
+Restart=always
+RestartSec=3
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
