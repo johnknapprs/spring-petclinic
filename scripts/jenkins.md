@@ -33,4 +33,6 @@
 ### Second Spring-Petclinic Failure
 
 1. Jenkins should now automatically kick off the job after your last push!
-2.
+2. You should now see a new error about a missing JUnit-4.15-SNAPSHOT from the Nexus Repository manager.
+![mvn_source_version_error](img/mvn_source_version_error.png)
+3. See the JUnit4 fork's "scripts/README.md" for further instructions
