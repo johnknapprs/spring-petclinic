@@ -16,5 +16,15 @@
 
 
 ### Setup Repository Jenkinsfile
-1. Copy [demo_base/Jenkinsfile](demo_base/Jenkinsfile) to the root directory of your repository
+
+1. Copy [demo_build/Jenkinsfile](demo_build/Jenkinsfile) to the root directory of your repository
 2. Commit the changes and push to Github
+3. Run job again
+
+### First Failure
+
+1. You should see an error in the Jenkins job that includes this output:
+![jenkins_source_no_host](img/jenkins_source_no_host.png)
+2. Update project's [pom.xml](../pom.xml) deployment urls from "192.168.1.104" to "localhost"
+3. You can also copy [demo_build/pom.xml](demo_build/pom.xml)
+4. Verify address's have been updated and push changes
