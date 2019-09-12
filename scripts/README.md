@@ -23,6 +23,8 @@ JUnit4 Dependency
 
 ### Start Virtual Machine
 
+Check out behavior in the Vagrantfile!
+
 ```SHELL
 # Start VM Box using Vagrant
 vagrant up --provision
@@ -47,4 +49,8 @@ sudo systemctl enable smee.service
 
 ### Nexus Deploy Authentication
 
+Jenkins, Maven, and Credentials
+
 ### Chaining Job Relationships
+
+Two Repositories. One CI System
