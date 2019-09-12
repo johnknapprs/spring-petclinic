@@ -44,3 +44,7 @@ sudo systemctl enable smee.service
 ### Jenkins Job Setup
 
 [Read how to setup Pipeline jobs in Jenkins](jenkins.md)
+
+### Nexus Deploy Authentication
+
+### Chaining Job Relationships
