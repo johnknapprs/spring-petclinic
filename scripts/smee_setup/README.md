@@ -7,5 +7,5 @@ sudo nano /lib/systemd/system/smee.service
 sudo systemctl enable smee.service
 
 # Start service
-sudo systemctl enable smee.service
+sudo systemctl start smee.service
 ```
